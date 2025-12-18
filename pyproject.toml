@@ -1,20 +1,25 @@
 [project]
 name = "mcp-quadrant"
 version = "1.0.0"
-description = "MCP server for coordinate conversion tools"
+description = "MCP server for coordinate conversion and document search with Qdrant"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "mcp",
-    "fastmcp",
-    "uvicorn",
-    "starlette",
+    "mcp>=1.0.0",
+    "fastmcp>=0.1.0",
+    "uvicorn>=0.27.0",
+    "starlette>=0.36.0",
+    "qdrant-client>=1.7.0",
+    "sentence-transformers>=2.2.2",
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    "transformers>=4.30.0",
 ]
 
 [project.optional-dependencies]
 geocoding = [
-    "geopy",
-    "requests",
+    "geopy>=2.4.0",
+    "requests>=2.31.0",
 ]
 
 [build-system]
